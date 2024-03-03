@@ -1,0 +1,31 @@
+<div class="row">
+    <div class="col-2"></div>
+    <div class="col-8 mt-5 pt-5 pb-5 mb-4">
+        <form action="" class="border shadow ">
+            <div class="row">
+                <div class="col-6 d-flex justify-content-center align-items-center flex-column">
+                    <img class="mt-5" src="https://t3.ftcdn.net/jpg/05/17/79/88/240_F_517798849_WuXhHTpg2djTbfNf0FQAjzFEoluHpnct.jpg" alt="no image" width="90px">
+                    <h1 style="color: rgb(19, 175, 192);" class="fw-bold mb-3">Welcome User</h1>
+                    <form [formGroup]="loginForm" (ngSubmit)="login()" class="border shadow rounded w-100 mb-5 ms-5  d-flex justify-content-center">
+                        <div class="w-75">
+                            <input formControlName="email" name="e-mail" type="text" placeholder="E-mail" class="form-control rounded-pill mt-4">
+                            <span *ngIf="loginForm.get('email')?.errors && loginForm.get('email')?.touched" class="text-danger fw-bold ms-2">Invalid email id</span>
+                            <input formControlName="password" name="pswd" type="text" placeholder="Paasword" class="form-control rounded-pill mt-3">
+                            <span *ngIf="loginForm.get('password')?.errors && loginForm.get('password')?.touched" class="text-danger fw-bold ms-2">Invalid Password</span>
+                            <button type="submit" class="btn w-100 rounded-pill mb-4 mt-3" style="background-color: rgb(19, 175, 192);">Login</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-6">
+                    <div class="bgImage d-flex justify-content-center align-items-center flex-column">
+                        <h3 class="pb-2  text-white fw-bold"><i class="fa-solid fa-city fa-beat"></i>&nbsp;&nbsp;Shop MART</h3>
+                        <h3 class="text-white fw-bold mb-5">Din't have an account</h3>
+                        <p class="text-white fw-bold" style="text-align: center;">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem itaque, odit incidunt in, possimus quae id error quis accusamus ipsa qui. Eius laboriosam quidem nostrum obcaecati rem at, optio doloremque.</p>
+                        <button routerLink="/register" class="btn btn-outline-light mt-4 rounded-pill">SIGN UP</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="col-2"></div>
+</div>

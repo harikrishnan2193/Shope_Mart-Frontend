@@ -1,0 +1,51 @@
+<app-header></app-header>
+<div>
+    <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active" style="width: 100%;">
+            <img src="https://img.freepik.com/premium-psd/free-psd-big-sale-youtube-thumbnail-design_634294-1799.jpg?size=626&ext=jpg&ga=GA1.1.1562127589.1693709886&semt=ais" height="350px" class="d-block w-100" alt="no image">
+          </div>
+          <div class="carousel-item">
+            <img src="https://img.freepik.com/free-vector/gradient-shopping-center-facebook-template_23-2149336459.jpg" class="d-block w-100" height="350px" alt="no image">
+          </div>
+          <div class="carousel-item">
+            <img src="https://img.freepik.com/free-psd/social-media-promo-template-sales_23-2149533432.jpg?w=1380&t=st=1706172863~exp=1706173463~hmac=944aa823479c1e111b7450227dd9cad5105a7bb4c0e0ee01e3cf4e614843964f" class="d-block w-100" height="350px" alt="no image">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+</div>
+<section class="py-5">
+    <div class="container px-4 px-lg-5 mt-5">
+        <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+            <div class="col mb-5" *ngFor="let product of allproduct">
+                <div class="card h-100 p-3">
+                    <!-- Product image-->
+                    <img routerLink="/view-product/{{product.id}}" class="card-img-top" [src]="product.image" width="200px" height="250px" alt="no image" />
+                    <!-- Product details-->
+                    <div class="card-body p-4">
+                        <div class="text-center">
+                            <!-- Product name-->
+                            <h5 class="fw-bolder">{{product.title.slice(0,20)}}...</h5>
+                            <!-- Product price-->
+                            <span class="text-primary fs-3">${{product.price}}</span>
+                        </div>
+                    </div>
+                    <!-- Product actions-->
+                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent d-flex justify-content-between">
+                        <div class="text-center"><a class="btn btn-outline-danger mt-auto" (click)="addToWishlist(product)" ><i class="fa-solid fa-heart"></i></a></div>
+                        <div class="text-center"><a class="btn btn-outline-success mt-auto" (click)="addToCart(product)"><i class="fa-solid fa-cart-shopping"></i></a></div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</section>

@@ -1,0 +1,33 @@
+<div class="row">
+    <div class="col-2"></div>
+    <div class="col-8 mt-5 pt-5 pb-5 mb-4">
+        <form action="" class="border shadow ">
+            <div class="row">
+                <div class="col-6 d-flex justify-content-center align-items-center flex-column">
+                    <img class="mt-5" src="https://t3.ftcdn.net/jpg/05/17/79/88/240_F_517798849_WuXhHTpg2djTbfNf0FQAjzFEoluHpnct.jpg" alt="no image" width="90px">
+                    <h1 style="color: rgb(19, 175, 192);" class="fw-bold mb-3">Join Family</h1>
+                    <form [formGroup]="registerForm"  (ngSubmit)="register()" class="border shadow rounded w-100 mb-5 ms-5  d-flex justify-content-center">
+                        <div class="w-75">
+                            <input formControlName="username" name="uname" type="text" placeholder="Enter user name" class="form-control rounded-pill mt-4">
+                            <span *ngIf="registerForm.get('username')?.errors && registerForm.get('username')?.touched " class="text-danger fw-bold ms-2">Invalid username</span>
+                            <input formControlName="email" name="email" type="text" placeholder="Enter E-mail" class="form-control rounded-pill mt-3">
+                            <span *ngIf="registerForm.get('email')?.errors && registerForm.get('email')?.touched " class="text-danger fw-bold ms-2">Invalid email</span>
+                            <input formControlName="password" name="passwd" type="text" placeholder="Enter Paasword" class="form-control rounded-pill mt-3">
+                            <span *ngIf="registerForm.get('password')?.errors && registerForm.get('password')?.touched " class="text-danger fw-bold ms-2">Invalid password</span>
+                            <button type="submit" class="btn w-100 rounded-pill mb-4 mt-4" style="background-color: rgb(19, 175, 192);">Register</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-6">
+                    <div class="bgImage d-flex justify-content-center align-items-center flex-column">
+                        <h3 class="pb-2  text-white fw-bold"><i class="fa-solid fa-city fa-beat"></i>&nbsp;&nbsp;Shop MART</h3>
+                        <h3 class="text-white fw-bold mb-5">Already Have An Account</h3>
+                        <p class="text-white fw-bold" style="text-align: center;">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem itaque, odit incidunt in, possimus quae id error quis accusamus ipsa qui. Eius laboriosam quidem nostrum obcaecati rem at, optio doloremque.</p>
+                        <button routerLink="/login" class="btn btn-outline-light mt-4 rounded-pill">SIGN IN</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="col-2"></div>
+</div>

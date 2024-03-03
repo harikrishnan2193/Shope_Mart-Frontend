@@ -1,0 +1,13 @@
+#hov{
+    text-decoration: none;
+    color: white;
+}
+#hov:hover{
+    color: blue;
+}
+#icon{
+    font-size: 30px;
+}
+#icon:hover{
+    color: rgb(19, 175, 192);;
+}
