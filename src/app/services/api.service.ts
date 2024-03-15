@@ -7,7 +7,7 @@ import { BehaviorSubject } from 'rxjs';
 })
 export class ApiService {
 
-  serverUrl = 'http://localhost:3000'
+  serverUrl = 'https://sope-mart-back-end.onrender.com'
 
   wishlistCount = new BehaviorSubject(0)   //behaviour subject
   cartCount = new BehaviorSubject(0)
