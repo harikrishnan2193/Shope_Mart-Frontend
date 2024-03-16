@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { ApiService } from '../services/api.service';
 import { Router } from '@angular/router';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-register',
@@ -29,19 +30,34 @@ export class RegisterComponent {
         next:(res:any)=>{
           console.log(res);
           
-          alert('registration complitted')
+          Swal.fire({
+            position: "top",
+            title: "Wow...",
+            text: "Registration complitted",
+            icon: "success"
+          });
           this.router.navigateByUrl('/login')
           
         },
         error:(err:any)=>{
           console.log(err);
-          alert(err.error)
+          Swal.fire({
+            position: "top",
+            title: "Oops...",
+            text: err.error,
+            icon: "error"
+          });
           
         }
       })
     }
     else{
-      alert('invalid form')
+      Swal.fire({
+        position: "top",
+        title: "Oops...",
+        text: "Invalid form",
+        icon: "error"
+      });
     }
   }
 

@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { ApiService } from '../services/api.service';
 import { Router } from '@angular/router';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-login',
@@ -30,18 +31,33 @@ export class LoginComponent {
           sessionStorage.setItem("username",res.existingUser.username)
           sessionStorage.setItem("token",res.token)
 
-          alert('login successfull')
+          Swal.fire({
+            position: "top",
+            title: "Wow...",
+            text: "Login successfull",
+            icon: "success"
+          });
           this.router.navigateByUrl('')
         },
         error:(err:any)=>{
           console.log(err);
-          alert(err.error)
+          Swal.fire({
+            position: "top",
+            title: "Oops...",
+            text: err.error,
+            icon: "error"
+          });
           
         }
       })
     }
     else{
-      alert('invalid form')
+      Swal.fire({
+        position: "top",
+        title: "Oops...",
+        text: "Invalid form",
+        icon: "error"
+      });
     }
   }
 
