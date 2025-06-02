@@ -1,10 +1,5 @@
 # ShopMart
 
-
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
-
 ## Description
 This is a fully functional **e-commerce platform** built using **Angular** for the frontend. It allows users to browse products, add items to a shopping **cart or wishlist**, and complete purchases through a checkout system integrated with **PayPal** for payments. The application follows the **MVC architecture** and uses **MongoDB** as the database. It also supports full **CRUD operations**, enabling efficient data management and seamless user experience. The platform supports user **authentication** and **session management**, ensuring secure and personalized access.
 
@@ -27,18 +22,21 @@ Follow the steps below to set up and run the project locally:
 
 The app will be available at: http://localhost:4200
 
-✅ Make sure Node.js and the Angular CLI installed globally before starting:
+3. **Make sure Node.js and the Angular CLI installed globally before starting:**
 
-    ```bash
-    npm install -g @angular/cli
+   ```bash
+   npm install -g @angular/cli
+
+
+
+### 🖼️ Screenshot
+
+![App Screenshot](./src/assets/image/Screenshot%202025-02-04%20212434.png)
 
 ### 🔗 Backend Repository
 
 👉 [Backend GitHub Repo](https://github.com/harikrishnan2193/Shope_Mart-Backend)
 
-### 🖼️ Screenshot
-
-![App Screenshot](./src/assets/image/Screenshot%202025-02-04%20212434.png)
 
 ### 🚀 Live Demo
 
