@@ -27,8 +27,6 @@ The app will be available at: http://localhost:4200
    ```bash
    npm install -g @angular/cli
 
-
-
 ### 🖼️ Screenshot
 
 ![App Screenshot](./src/assets/image/Screenshot%202025-02-04%20212434.png)
