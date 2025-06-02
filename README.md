@@ -1,27 +1,45 @@
 # ShopMart
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.7.
 
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
-## Code scaffolding
+## Description
+This is a fully functional **e-commerce platform** built using **Angular** for the frontend. It allows users to browse products, add items to a shopping **cart or wishlist**, and complete purchases through a checkout system integrated with **PayPal** for payments. The application follows the **MVC architecture** and uses **MongoDB** as the database. It also supports full **CRUD operations**, enabling efficient data management and seamless user experience. The platform supports user **authentication** and **session management**, ensuring secure and personalized access.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-## Build
+## Getting Started
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.7.
 
-## Running unit tests
+Follow the steps below to set up and run the project locally:
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+1. **Install dependencies:**
 
-## Running end-to-end tests
+   ```bash
+   npm install
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+2. **Start the development server:**
 
-## Further help
+   ```bash
+   ng serve
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+The app will be available at: http://localhost:4200
+
+✅ Make sure Node.js and the Angular CLI installed globally before starting:
+
+    ```bash
+    npm install -g @angular/cli
+
+### 🔗 Backend Repository
+
+👉 [Backend GitHub Repo](https://github.com/harikrishnan2193/Shope_Mart-Backend)
+
+### 🖼️ Screenshot
+
+![App Screenshot](./src/assets/image/Screenshot%202025-02-04%20212434.png)
+
+### 🚀 Live Demo
+
+[Click here to try the live app](https://shope-mart-front-end.vercel.app/)
